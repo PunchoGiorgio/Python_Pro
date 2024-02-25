@@ -46,7 +46,7 @@ def post_a_message(channel: SocialChannel, message: str, timestamp: str):
     channel.make_a_post(message, timestamp)
 
 
-def subscripe():
+def subscribe():
     number = random.randint(700, 5000)
     return number
 
@@ -87,9 +87,9 @@ post_1 = Post(message="Some materials for YouTube", timestamp="26/02/28 21:15")
 post_2 = Post(message="Some materials for Facebook", timestamp="26/08/10 17:00")
 post_3 = Post(message="Some materials for Twitter", timestamp="15/02/21 01:55")
 
-result_1 = Youtube(network="youtube", follower=subscripe())
-result_2 = Facebook(network="facebook", follower=subscripe())
-result_3 = Twitter(network="twitter", follower=subscripe())
+result_1 = Youtube(network="youtube", follower=subscribe())
+result_2 = Facebook(network="facebook", follower=subscribe())
+result_3 = Twitter(network="twitter", follower=subscribe())
 
 posts = [post_1, post_2, post_3]
 channels = [result_1, result_2, result_3]
