@@ -30,7 +30,9 @@ def using_threads():
     thread_one = threading.Thread(target=encrypt_file, args=("rockyou.txt",))
     thread_two = threading.Thread(
         target=download_image,
-        args=("https://media.gettyimages.com/id/583910668/photo/film-hard-target-by-john-woo.jpg?s=1024x1024&w=gi&k=20&c=XWXPE9W1wdGwxHb2BAV2QlMfPfMy3a5lJdJZrzSNwGY=",),
+        args=(
+            "https://media.gettyimages.com/id/583910668/photo/film-hard-target-by-john-woo.jpg?s=1024x1024&w=gi&k=20&c=XWXPE9W1wdGwxHb2BAV2QlMfPfMy3a5lJdJZrzSNwGY=",
+        ),
     )
 
     point_1 = time.perf_counter()

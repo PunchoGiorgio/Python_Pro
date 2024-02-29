@@ -31,7 +31,9 @@ def using_processes():
     process_one = multiprocessing.Process(target=encrypt_file, args=("rockyou.txt",))
     process_two = multiprocessing.Process(
         target=download_image,
-        args=("https://media.gettyimages.com/id/150247106/photo/the-expendables-2-photocall.jpg?s=1024x1024&w=gi&k=20&c=zZtRoyJm4SiB1HOSexWkH43X9bkQFKchvpq12GYJ7s8=",),
+        args=(
+            "https://media.gettyimages.com/id/150247106/photo/the-expendables-2-photocall.jpg?s=1024x1024&w=gi&k=20&c=zZtRoyJm4SiB1HOSexWkH43X9bkQFKchvpq12GYJ7s8=",
+        ),
     )
 
     point_1 = time.perf_counter()
