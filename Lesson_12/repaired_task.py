@@ -26,7 +26,7 @@ def download_image(image_url, name):
 
 def using_threads():
 
-    thread_one = threading.Thread(target=encrypt_file, args=("rockyou.txt",))
+    thread_one = threading.Thread(target=encrypt_file, args=("media/rockyou.txt",))
     thread_two = threading.Thread(
         target=download_image,
         args=(
@@ -58,7 +58,7 @@ def using_threads():
 
 def using_processes():
 
-    process_one = multiprocessing.Process(target=encrypt_file, args=("rockyou.txt",))
+    process_one = multiprocessing.Process(target=encrypt_file, args=("media/rockyou.txt",))
     process_two = multiprocessing.Process(
         target=download_image,
         args=(
@@ -91,5 +91,5 @@ def using_processes():
 if __name__ == "__main__":
     start = time.perf_counter()
 
-    # using_threads()
-    using_processes()
+    using_threads()
+    # using_processes()
