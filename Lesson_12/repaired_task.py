@@ -58,7 +58,9 @@ def using_threads():
 
 def using_processes():
 
-    process_one = multiprocessing.Process(target=encrypt_file, args=("media/rockyou.txt",))
+    process_one = multiprocessing.Process(
+        target=encrypt_file, args=("media/rockyou.txt",)
+    )
     process_two = multiprocessing.Process(
         target=download_image,
         args=(
