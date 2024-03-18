@@ -1,0 +1,7 @@
+# phpstorm project files
+.idea
+venv
+.ruff_cache
+__pycache__/
+rockyou.txt
+media/
