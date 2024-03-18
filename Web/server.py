@@ -21,9 +21,12 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-create_random_string: Callable[[int], str] = lambda size: "".join(
-    [random.choice(string.ascii_letters) for _ in range(size)]
-)
+
+def f(size):
+    return "".join([random.choice(string.ascii_letters) for _ in range(size)])
+
+
+create_random_string: Callable[[int], str] = f
 
 
 @app.get("/generate-article")
